@@ -1,0 +1,224 @@
+<apex:page controller="FGM_Base.SetupPayments" action="{!InitialiseSavePayments}">
+    <apex:includeScript value="{!URLFOR($Resource.FGM_Base__FoundationConnect, '/jQuery/jquery-1.7.2.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FGM_Base__FoundationConnect, '/jQuery/jquery-ui-1.8.20.custom.min.js')}" />
+    
+    <apex:stylesheet value="{!URLFOR($Resource.FGM_Base__FoundationConnect, '/css/jquery-ui-1.8.20.custom.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.FGM_Base__FoundationConnect, '/css/styles.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.FGM_Base__FoundationConnect, '/js/PaymentWizard.js')}" /> 
+    <!--   <script lang="javascript" src="http://localhost/GrantsManager/base/PaymentWizard.js" ></script> -->
+    <script type="text/javascript">
+        var AwardedAmount = '{!m_decTotalAmount}';
+        $(document).ready(function(){
+            if(AwardedAmount == null || AwardedAmount == '')
+                AwardedAmount = parseFloat('0').toFixed(2);
+            calculateScheduledPayment();
+            setEditabilityOfAllWizard();            
+        });
+        function setEditabilityOfAllWizard(){
+            var arrAllPaymentStatuses = $(document).find('select.paymentStatus');
+            for(var iIndex=0; iIndex < arrAllPaymentStatuses.length; iIndex++){
+                setPaymentEditability(arrAllPaymentStatuses[iIndex]);
+            }
+        }
+        function checkuncheck(sourceElement)
+        {
+            for(var i=0;i<$('.chkData').length;i++)
+                $('.chkData')[i].checked=sourceElement.checked;
+        }
+        function setEditabilityOfAllWizard(){
+         var arrAllPaymentStatuses = $(document).find('select.paymentStatus');
+         for(var iIndex=0; iIndex < arrAllPaymentStatuses.length; iIndex++){
+             setPaymentEditability(arrAllPaymentStatuses[iIndex]);       
+         }
+       }
+       function disableControls()
+       {
+            $('.waitingSearchDiv').css('display','block');
+       }
+       function enableControlsOnSubmit()
+       {
+            var flag=false;
+            if($('.strChecked')[0].innerHTML=='checked')
+                $('.waitingSearchDiv').css('display','none');
+       }
+       function enableControlsOnCancel()
+       {
+            $('.waitingSearchDiv').css('display','none');
+       }
+    </script> 
+    <style type="text/css">
+            .apexp .bPageBlock .detailList .list .last td, .apexp .bPageBlock .detailList .list .last th, .apexp .detailList .list .totalRow td, .apexp .detailList .list .totalRow th {
+            border-bottom-width: 1px;
+        }
+        .waitingSearchDiv {
+            background-color: #000;height: 100%;opacity:0.65;width:100%;display:none;
+        }
+    </style>
+    
+    <apex:form >
+        <apex:pageBlock title="Setup Payments">
+             <div class="waitingSearchDiv" ></div>
+            <apex:outputPanel id="popup" style="z-index: 999999;">
+                <apex:outputPanel layout="block" styleClass="customPopup" style="width:320px" rendered="{!displayPopup}">
+                <div class="headercss">
+                    Add New Program
+                </div>
+                <div class="bodycss">
+                    <div style="max-height:330px;overflow:auto;">
+                    <apex:outputText Value="{!strMessage}" style="color:red;padding:0px 2px;" ></apex:outputText>
+                        <apex:PageBlockTable value="{!lstAddProgramList}" var="prbList" rendered="{!bhideProgramList}" >
+                            <apex:column headerValue="Private?">
+                                <apex:facet name="header" >
+                                 <apex:inputCheckBox style="display:block;" styleClass="chkHeader" onchange="checkuncheck(this);" >Select</apex:inputCheckBox> </apex:facet>
+                                 <apex:inputCheckBox styleClass="chkData" Value="{!prbList.bIsChecked}"  ></apex:inputCheckBox>
+                            </apex:column>
+                            <apex:Column >
+                                <apex:facet name="header">Program Name</apex:facet>
+                                <apex:outputText Value="{!prbList.strProgramName}"></apex:outputText>
+                            </apex:Column>
+                        </apex:PageBlockTable>
+                    </div>
+                    <div style="padding:10px;text-align:right;">
+                        <apex:commandButton action="{!addProgram}" oncomplete="enableControlsOnSubmit()" id="btnAdd"  value="Submit" rerender="sectionPayments,pnlMessages,popup,strCheckedid,strMessage" status="Processing"></apex:commandButton>
+                        <apex:commandButton action="{!cancelProgram}" oncomplete="enableControlsOnCancel()"  value="Cancel" rerender="sectionPayments,pnlMessages,popup" status="Processing"></apex:commandButton>
+                    </div>
+                </div>
+             </apex:outputPanel>
+                </apex:outputPanel>
+            <apex:OutputPanel id="pnlMessages">
+                <apex:pagemessages />
+            </apex:OutputPanel> 
+            <table width="100%" border="0" Class="tblAmount">
+                <tr>
+                    <td align="left" height="25px">
+                            <apex:actionStatus id="Processing" startText="(Processing...)"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" >
+                        <table border="0">
+                            
+                            <tr>
+                                <td align="right" height="20px" width="100px">
+                                    <b>Awarded</b> 
+                                </td>
+                                <td align="left" height="20px" width="85px">
+                                        <apex:outputText value="{!m_decTotalAmount}" id="inpOppAmount" styleClass="awardedAmount"/>
+                                </td>
+                                <td align="right" height="20px" width="90px">
+                                    <b>Unscheduled </b>
+                                </td>
+                                <td align="left" height="20px" width="85px">
+                                    <apex:outputText value="{!decUnusedAmount}" id="inpRemainingAmount" styleClass="unsheduledAmount"/>
+                                </td>
+                                <td align="right" height="20px" width="100px">
+                                    <b>Grant Number: </b> 
+                                </td>
+                                <td align="left" height="20px" width="85px">
+                                        <apex:outputText value="{!Opportunity.FGM_Base__Request_Number__c}" id="inpRequestNumber" styleClass="RequestNumber"/>
+                                </td>
+                                <td align="right" height="20px" width="90px">
+                                    <b>Project Title: </b>
+                                </td>
+                                <td align="left" height="20px" width="auto">
+                                    <apex:outputText value="{!Opportunity.Name}" id="inpProjectName" styleClass="ProjectName"/>
+                                    <apex:outputText Value="{!strChecked}" styleClass="strChecked" id="strCheckedid" style="display:none" ></apex:outputText>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <apex:pageBlockButtons >
+                <apex:commandButton id="btnSave" value="Save" action="{!Save}" disabled="{!IsSaveDisabled}"/>
+                <apex:commandButton id="btnAddPayment" value="Add Payment" action="{!addAdditionalPayment}" rerender="sectionPayments" oncomplete="setEditabilityOfAllWizard();" immediate="true"/>
+                <apex:commandButton id="btnPrevious" value="Previous" action="{!BackToSetup}" immediate="true"/>
+                <apex:commandButton id="btnReturn" value="Cancel" action="{!BackToOpportunity}" immediate="true"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection id="sectionPayments">
+                <apex:OutputPanel id="pnlPayment">
+                <apex:pageBlockTable value="{!PaymentInfoList}" var="payInfo" id="pbtableProgramArea" width="100%">
+                    <apex:column style="text-align:right;">
+                        <apex:facet name="header">Payment #</apex:facet>
+                        <apex:outputText value="{!payInfo.PaymentNo}"/>
+                    </apex:column>
+                    <apex:column width="30px">
+                         <apex:facet name="header">%</apex:facet>
+                         <apex:inputText value="{!payInfo.Percentage}" style="width:40px;" id="txtPaymentPercentage" styleClass="paymentPercentage" onChange="changePaymentAmount(this);"/>
+                    </apex:column>               
+                    <apex:column styleClass="colAmount">
+                        <apex:facet name="header">Amount</apex:facet>
+                        <apex:inputField value="{!payInfo.Payment.FGM_Base__Amount__c}" id="inpAmount" styleClass="paymentAmount" onChange="changePaymentPercentage(this);" />
+                        <span class="spMsg" style="padding-top:5px;"  ></span>
+                    </apex:column>
+                    <apex:column > 
+                        <apex:facet name="header">Date</apex:facet>
+                        <apex:inputField value="{!payInfo.Payment.FGM_Base__Scheduled_Payment_Date__c}" id="inpDate"></apex:inputField>
+                    </apex:column>
+                                        
+                    <apex:column styleClass="colContrib" width="100px">
+                        <apex:facet name="header">Contributing Program</apex:facet>
+                        <apex:OutputPanel id="pnlContribProgram">
+                            <apex:pageBlockTable value="{!payInfo.ContribPrograms}" var="contribProgInfo" id="pbtableContribProg">
+                                <!-- <apex:column >
+                                    <apex:inputField value="{!contribProgInfo.ContribProgram.Expected_Payment_Date__c}" id="txtContribDate"/>
+                                </apex:column > -->
+                                <apex:column >
+                                    <apex:facet name="header" ><b>Name</b></apex:facet>
+                                    <apex:outputText value="{!contribProgInfo.Name}"/>
+                                </apex:column>
+                                <apex:column width="30px">
+                                    <apex:facet name="header" ><b>%</b></apex:facet>
+                                    <apex:inputText value="{!contribProgInfo.Percentage}" style="width:40px;" id="txtContribPercentage" styleClass="ContribPercentage" onChange="changeContribAmount(this);"/>
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header"><b>Amount</b></apex:facet>
+                                     <div style="width:190px;">
+                                        <div style="float:left;background-color:#c00;width:3px;height:19px;margin-top:1px;">                                            
+                                        </div>
+                                        <div style="float:left;margin-left:4px;">
+                                            <apex:inputField value="{!contribProgInfo.ContribProgram.FGM_Base__Amount__c}" id="txtContribAmount" styleClass="ContribAmount" onChange="changeContribPercentage(this);"/>
+                                        </div>
+                                        <div style="clear:both;"></div>
+                                    </div>       
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header"><b>Lead</b></apex:facet>
+                                    <apex:inputCheckbox disabled="{!contribProgInfo.ContribProgram.FGM_Base__Lead__c}" rendered="{!contribProgInfo.ContribProgram.FGM_Base__Lead__c}" value="{!contribProgInfo.ContribProgram.FGM_Base__Lead__c}" ></apex:inputCheckbox>
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header"><b> Action </b></apex:facet>
+                                    <apex:commandLink style="text-decoration:none;color:black" value="Delete" action="{!DeleteContrProgram}" rendered="{!!contribProgInfo.ContribProgram.FGM_Base__Lead__c}"  onclick="if(!confirm('Are you sure you want to delete contributing program {!contribProgInfo.Name}?')) return false;" oncomplete="calculateScheduledPayment();setEditabilityOfAllWizard();" status="Processing" styleClass="btn" rerender="sectionPayments,pnlMessages,popup">
+                                        <apex:param name="iPaymentId" value="{!payInfo.PaymentNo}" assignTo="{!iPaymentId}"/>
+                                        <apex:param name="idContributor" value="{!contribProgInfo.Name}" assignTo="{!strContriName}" />
+                                    </apex:commandLink>                                  
+                                </apex:column>
+                            </apex:pageBlockTable>
+                        </apex:OutputPanel>
+                         <div style="margin-top:5px;text-align:right"  >                             
+                            <apex:commandLink style="text-decoration:none;color:black" value="Add" action="{!showAddProgramPopup}" styleClass="btn" rerender="sectionPayments,pnlMessages,popup" status="Processing" oncomplete="disableControls()">
+                                <apex:param name="iPaymentId" value="{!payInfo.PaymentNo}" assignTo="{!iPaymentId}"/>
+                            </apex:commandLink>
+                          </div>       
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header"><b>Status</b></apex:facet>
+                        <apex:inputField value="{!payInfo.Payment.FGM_Base__Status__c}" onchange="setPaymentEditability(this);" styleClass="paymentStatus" id="ddlStatus"/>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header"><b>Payment Type</b></apex:facet>
+                        <apex:inputField value="{!payInfo.Payment.FGM_Base__Payment_Type__c}" id="ddlPaymentType"/>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header"><b>Action</b></apex:facet>
+                        <apex:commandButton value="Delete" action="{!deleteIndividualPayment}" style="float:right;" rerender="sectionPayments" onclick="if(!confirm('Are you sure you want to delete payment #{!payInfo.PaymentNo}?')) return false;" oncomplete="calculateScheduledPayment();setEditabilityOfAllWizard();" status="Processing">
+                                <apex:param name="ipaymentNo" value="{!payInfo.PaymentNo}" assignTo="{!iPaymentNumber}"/>
+                        </apex:commandButton>
+                    </apex:column>
+                </apex:pageBlockTable>
+                </apex:OutputPanel>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

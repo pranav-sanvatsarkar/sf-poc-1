@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>EIN__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The EIN is a unique nine-digit number assigned by the IRS to businesses operating in the United States. It is also known as the Tax Identification Number (TIN), Federal Employer Identification Number (FEIN) or the Federal Tax Identification Number.</inlineHelpText>
+        <label>EIN</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IRS_Letter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>IRS Letter</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <validationRules>
+        <fullName>EIN_Validation</fullName>
+        <active>false</active>
+        <description>This will validate that an EIN is formatted with 2 digits, a dash, then 7 digits (xx-xxxxxxx)</description>
+        <errorConditionFormula>NOT( 
+OR( 
+ISBLANK(  EIN__c ), 
+REGEX( EIN__c , &quot;[0-9]{2}-[0-9]{7}&quot;) 
+) 
+)</errorConditionFormula>
+        <errorDisplayField>EIN__c</errorDisplayField>
+        <errorMessage>Please format your EIN in the following format: xx-xxxxxxx</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Guidestar_Info</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Guidestar Info</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__GuideStarInfo?Id={! Account.Id }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Lookup_501c3</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Lookup 501c3</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__Verify501c3?Id={!Account.Id}&amp;EIN={!Account.EIN__c}&amp;ObjName=Account</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Verify_Pub78</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Verify 501c3</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__VerifyIRSMBAndPub78?OrgName={!Account.Name}&amp;EIN={!Account.EIN__c }&amp;ObjName=Account&amp;Id={!Account.Id}&amp;State={!Account.BillingState}</url>
+    </webLinks>
+</CustomObject>

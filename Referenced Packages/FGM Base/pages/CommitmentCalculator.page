@@ -1,0 +1,73 @@
+<apex:page standardController="Account" extensions="FGM_Base.CommitmentCalculator" docType="html-5.0"  sidebar="true" title="CommitmentCalculator" showChat="false">
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function(){       
+        $('.dateField' ).datepicker({
+          changeMonth: true,
+          changeYear: true,
+          dateFormat:'mm-dd-yy',
+          showOn: "button",
+          buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+          buttonImageOnly: true,
+          buttonText: "Select date"
+        });    
+    });
+</script>
+<style>
+    img {   
+    margin-left: 5px;
+    }
+</style>
+<apex:form >
+<apex:pageBlock >
+
+  <div style="text-align:center;">
+   <apex:commandButton action="{!rollupOrganisationPaymentInRange}" value="Calculate Payments" rendered="true"  /> 
+  </div>
+<div>
+<apex:pagemessages />
+</div>
+
+<apex:pageBlockSection >
+    <apex:input styleClass="dateField" label="From Date" value="{! dateFrom }"/>
+     <apex:input styleClass="dateField"  label="To Date" value="{! dateTo }"/> 
+    <!--   <apex:input  label="From Date" value="{! dateFrom }" type='auto' />
+     <apex:input  label="To Date" value="{! dateTo }" type='auto' />-->
+     
+</apex:pageBlockSection>  
+
+<apex:pageBlockTable value="{!lstSummary}"  var="Summary" style="width:100%" headerClass="hidden">
+       <apex:column style="width:50%">
+           <table style="width:100%"> 
+               <tr style="border:0px none;"> 
+                   <td style="width:40%;border:0px none;"> <b>{!Summary.Summary1.fieldlabel}</b> </td> 
+                   <td style="width:10%;border:0px none;"> <apex:image rendered="{!Summary.Summary1.helptext != ''}" value="/img/alohaSkin/help_orange.png" title="{!Summary.Summary1.helptext}" height="12" width="12"/> </td>
+                   <td style="width:50%;border:0px none;"> {!Summary.Summary1.fieldvalue} </td> 
+               </tr> 
+           </table>
+       </apex:column>    
+       <apex:column style="width:50%"> 
+           <table style="width:100%"> 
+               <tr style="border:none;"> 
+                   <td style="width:40%;border:0px none;"> <b>{!Summary.Summary2.fieldlabel}</b> </td> 
+                   <td style="width:10%;border:0px none;"> <apex:image rendered="{!Summary.Summary2.helptext != ''}" value="/img/alohaSkin/help_orange.png" title="{!Summary.Summary2.helptext}" height="12" width="12"/> </td>
+                   <td style="width:50%;border:0px none;"> {!Summary.Summary2.fieldvalue} </td> 
+               </tr> 
+           </table>         
+       </apex:column>       
+</apex:pageBlockTable>
+
+</apex:pageBlock>
+<style type="text/css">
+.hidden {
+    display: none;
+    }
+.bPageBlock .detailList th, .bPageBlock .detailList td {
+    vertical-align: inherit;
+}
+</style>
+</apex:form>
+
+</apex:page>

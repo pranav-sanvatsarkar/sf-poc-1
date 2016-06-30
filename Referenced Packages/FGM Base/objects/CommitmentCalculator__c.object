@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Amount_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enter API name of Amount field from Payment/Opportunity Object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter API name of Amount field from Payment/Opportunity Object.</inlineHelpText>
+        <label>Amount Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enter API name of Date field from Payment/Opportunity object to compare between from and to date.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter API name of Date field from Payment/Opportunity object to compare between from and to date.</inlineHelpText>
+        <label>Date Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field_Label__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enter the field label.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the field label.</inlineHelpText>
+        <label>Field Label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Help_Text__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enter help text.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter help text.</inlineHelpText>
+        <label>Help Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Object__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Object</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Payment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enter Payment Type values separated by comma as a filter for searching.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Payment Type values separated by comma as a filter for searching.</inlineHelpText>
+        <label>Payment Type</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enter API name of Status field from Payment/Opportunity Object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter API name of Status field from Payment/Opportunity Object.</inlineHelpText>
+        <label>Status Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enter Status values separated by comma as a filter for searching.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Status values separated by comma as a filter for searching.</inlineHelpText>
+        <label>Status</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Commitment Calculator</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Field_Label__c</columns>
+        <columns>Amount_Field__c</columns>
+        <columns>Object__c</columns>
+        <columns>Date_Field__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>CommitmentCalculator Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Commitment Calculator Setup</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

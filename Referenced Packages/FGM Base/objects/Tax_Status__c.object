@@ -1,0 +1,3132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This object is used to store Tax Status lookups.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Accounting_Period__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This designates the accounting period or fiscal year ending date (Jan - Dec) of the organization (MM).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This designates the accounting period or fiscal year ending date (Jan - Dec) of the organization (MM).</inlineHelpText>
+        <label>Accounting Period</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Activity_Code_Category__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The descriptive category of the activity codes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The descriptive category of the activity codes</inlineHelpText>
+        <label>Activity Code Category</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Activity_Codes_Descriptions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An organization formerly listed up to three activity codes on application Forms 1023 and 1024.  These are codes which reflect an organization&apos;s purposes, activities, operations, or type.  From one to three activity codes may be in this field.  Note:  activity codes became obsolete with the adoption of the National Taxonomy of Exempt Entity (NTEE) coding system in January 1995.  However, organizations determined to be exempt prior to that date will reflect the activity codes previously assigned.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>An organization formerly listed up to three activity codes on application Forms 1023 and 1024.  Note:  activity codes became obsolete with the adoption of the National Taxonomy of Exempt Entity (NTEE) coding system in January 1995.</inlineHelpText>
+        <label>Activity Codes Descriptions</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Activity_Codes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An organization formerly listed up to three activity codes on application Forms 1023 and 1024.  These are codes which reflect an organization&apos;s purposes, activities, operations, or type.  From one to three activity codes may be in this field.  Note:  activity codes became obsolete with the adoption of the National Taxonomy of Exempt Entity (NTEE) coding system in January 1995.  However, organizations determined to be exempt prior to that date will reflect the activity codes previously assigned.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>An organization formerly listed up to three activity codes on application Forms 1023 and 1024.   Note:  activity codes became obsolete with the adoption of the National Taxonomy of Exempt Entity (NTEE) coding system in January 1995.</inlineHelpText>
+        <label>Activity Codes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Advanced_Ruling_Expiration_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A charitable organization exempt under IRC 501(c)(3) whose status as a public charity (rather than a private foundation) has not been determined generally will be allowed to operate as a public charity for a specified period of time.  At the end of this time frame (expiration date), a final determination will be made as to the proper classification of the organization.  This field shows the month and year (YYYYMM) when an advance ruling is to expire.
+Elimination of the Advance Ruling Process 
+  
+On September 9, 2008, the IRS issued temporary Income Tax Regulations, which eliminate the advance ruling process for a section 501(c)(3) organization. Under the new regulations, a new 501(c)(3) organization will be classified as a publicly supported charity, and not a private foundation, if it can show that it reasonably can be expected to be publicly supported when it applies for tax-exempt status.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field shows the month and year (YYYYMM) when an advance ruling is to expire.
+ 
+On September 9, 2008, the IRS issued temporary Income Tax Regulations, which eliminate the advance ruling process for a section 501(c)(3) organization.</inlineHelpText>
+        <label>Advanced Ruling Expiration Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Affiliation_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Affiliation Code defines the organizational grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Affiliation Code defines the organizational grouping.</inlineHelpText>
+        <label>Affiliation Code</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Affiliation_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Affiliation Description provided the Descriptive information of the associated Affiliation Code that this verification returned.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Affiliation Description provided the Descriptive information of the associated Affiliation Code that this verification returned.</inlineHelpText>
+        <label>Affiliation Description</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Asset_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Amount is an amount from the most recent Form 990 series return filed by the organization.  Asset Amount is the Book Value Total Assets End of Year  PART IV Balance Sheet Line 59 Col. (B) shown on the Form 990.  This field is also from PART II, Line 25, Col. (B) EOY on Form 990EZ and PART II, Line 16, Col. (b) on Form 990PF.  This field is dollars only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Amount is an amount from the most recent Form 990 series return filed by the organization.  Asset Amount is the Book Value Total Assets End of Year  PART IV Balance Sheet Line 59 Col.</inlineHelpText>
+        <label>Asset Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Code_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Codes relate to the book value amount of assets shown on the most recent Form 990 series return filed by the organization.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Codes relate to the book value amount of assets shown on the most recent Form 990 series return filed by the organization.</inlineHelpText>
+        <label>Asset Code Description</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1   to   9,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10,000   to   24,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25,000   to   99,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100,000   to   499,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>500,000   to   999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1,000,000   to   4,999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5,000,000   to   9,999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10,000,000   to   49,999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50,000,000   to   greater</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Codes relate to the book value amount of assets shown on the most recent Form 990 series return filed by the organization.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Codes relate to the book value amount of assets shown on the most recent Form 990 series return filed by the organization.</inlineHelpText>
+        <label>Asset Code</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Classification_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Subsection Codes are the codes shown under section 501(c) of the Internal Revenue Code of 1986, which define the category under which an organization may be exempt.  Classifications are sub-designations within a subsection.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Subsection Codes are the codes shown under section 501(c) of the Internal Revenue Code of 1986, which define the category under which an organization may be exempt.  Classifications are sub-designations within a subsection.</inlineHelpText>
+        <label>Classification Code</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_of_Status_Check__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The date on which this Tax Status verification was run.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date on which this Tax Status verification was run.</inlineHelpText>
+        <label>Date of Status Check</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Deductibility_Code_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deductibility Code signifies whether contributions made to an organization are deductible. The description provides the descriptive representation of this code.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deductibility Code signifies whether contributions made to an organization are deductible. The description provides the descriptive representation of this code.</inlineHelpText>
+        <label>Deductibility Code Description</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Contributions are deductible.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contributions are not deductible.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contributions are deductible by treaty (foreign organizations).</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Deductibility_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deductibility Code signifies whether contributions made to an organization are deductible.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deductibility Code signifies whether contributions made to an organization are deductible.</inlineHelpText>
+        <label>Deductibility Code</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Disclaimer__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>&quot;The information provided below is based on the Verification Data Source and Version Number identified below. NPower has taken reasonable steps to ensure the data provided below is accurate. We strongly encourage you to obtain an actual copy of an organization&apos;s IRS Determination letter before providing financial support or services.&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Disclaimer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Exempt_Org_Status_Code_Desc__c</fullName>
+        <deprecated>false</deprecated>
+        <description>EXEMPT ORGANIZATION STATUS CODE (New)
+
+The EO Status Code defines the type of exemption held by the organization.  The following is a list of EO status codes and their definitions included in these files:
+
+	Code		Description
+01 Unconditional Exemption
+02 Conditional Exemption
+12 Trust described in section 4947(a)(2) of the IR Code
+25		Organization terminating its private foundation status under section 
+			507(b)(1)(B) of the Code
+32 Organization that did not respond to an IRS CP 140 notice requesting
+		information on its continued exempt status</description>
+        <externalId>false</externalId>
+        <label>Exempt Org Status Code Desc</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Exempt_Organization_Status_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>EXEMPT ORGANIZATION STATUS CODE (New)
+
+The EO Status Code defines the type of exemption held by the organization.  The following is a list of EO status codes and their definitions included in these files:
+
+	Code		Description
+01 Unconditional Exemption
+02 Conditional Exemption
+12 Trust described in section 4947(a)(2) of the IR Code
+25		Organization terminating its private foundation status under section 
+			507(b)(1)(B) of the Code
+32 Organization that did not respond to an IRS CP 140 notice requesting
+		information on its continued exempt status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>EXEMPT ORGANIZATION STATUS CODE (New)
+
+The EO Status Code defines the type of exemption held by the organization.</inlineHelpText>
+        <label>Exempt Organization Status Code</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Failed_Verification__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>&quot;THE EIN NUMBER YOU SUBMITTED IN YOUR TAX STATUS VERIFICATION QUERY AGAINST THE &quot; &amp;  TEXT(Verification_Data_Source__c) &amp; &quot; DID NOT YIELD ANY MATCHES. VERY NEWLY FORMED NONPROFITS OFTEN DO NOT EXISTS IN THESE DATABASES. PLEASE ASK FOR A COPY OF THE ORGANIZATION&apos;S IRS DETERMINATION LETTER TO CONFIRM THEIR STATUS.&quot;</formula>
+        <label>Failed Verification</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Filing_Requirement_Code_1_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This indicates the primary return(s) the organization is required to file.
+The FR Code for Form 990 or 990EZ are located in the first two positions of the field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This indicates the primary return(s) the organization is required to file.
+The FR Code for Form 990 or 990EZ are located in the first two positions of the field.</inlineHelpText>
+        <label>Filing Requirement Code 1 Description</label>
+        <picklist>
+            <picklistValues>
+                <fullName>990 - Group return</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>990 - Government 501(c)(1)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>990 - (all other) or 990EZ return</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>990 - Required to file Form 990-N - Income less than $25,000 per year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>990 - Not required to file (church)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>990 - Not required to file (religious organization)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>990 - Not required to file (instrumentalities of states or political subdivisions)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>990 - Not required to file(all other)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>990 - Required to file Form 990-BL, Black Lung Trusts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Filing_Requirement_Code_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This indicates the primary return(s) the organization is required to file.
+The FR Code for Form 990 or 990EZ are located in the first two positions of the field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This indicates the primary return(s) the organization is required to file.
+The FR Code for Form 990 or 990EZ are located in the first two positions of the field.</inlineHelpText>
+        <label>Filing Requirement Code 1</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Filing_Requirement_Code_2_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This indicates the primary return(s) the organization is required to file. The FR Code for the 990PF is located in position 3 of the field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This indicates the primary return(s) the organization is required to file. The FR Code for the 990PF is located in position 3 of the field.</inlineHelpText>
+        <label>Filing Requirement Code 2 Description</label>
+        <picklist>
+            <picklistValues>
+                <fullName>990-PF return</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No 990-PF return</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Filing_Requirement_Code_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This indicates the primary return(s) the organization is required to file.
+The FR Code for the 990PF is located in position 3 of the field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This indicates the primary return(s) the organization is required to file.
+The FR Code for the 990PF is located in position 3 of the field.</inlineHelpText>
+        <label>Filing Requirement Code 2</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Form_990_Revenue_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount from Form 990, Part 1, Line 12, or Part 1, Line 9, of Form 990EZ.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount from Form 990, Part 1, Line 12, or Part 1, Line 9, of Form 990EZ.</inlineHelpText>
+        <label>Form 990 Revenue Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Foundation_Code_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Descriptive text that explains the Foundation Code.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Descriptive text that explains the Foundation Code.</inlineHelpText>
+        <label>Foundation Code Description</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Foundation_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is deprecated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is deprecated.</inlineHelpText>
+        <label>Foundation Code</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Group_Exemption_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is a four-digit internal number assigned to central/parent organizations holding group exemption letters.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a four-digit internal number assigned to central/parent organizations holding group exemption letters.</inlineHelpText>
+        <label>Group Exemption Number</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IRS_Foundation_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Foundation Code (Dup)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IRS_Master_Business_File_Version__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Version of the IRS Business Master File that was used in this verification. (Only applies if the source was the IRS Business Master File.)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Version of the IRS Business Master File that was used in this verification. (Only applies if the source was the IRS Business Master File.)</inlineHelpText>
+        <label>IRS Business Master File Version</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IRS_Publication_78_File_Version__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates the version of the IRS Publication 78 file that was used for this verification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the version of the IRS Publication 78 file that was used for this verification.</inlineHelpText>
+        <label>IRS Publication 78 File Version</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IRS_SubsectionClassificationDescription__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Subsection Codes are the codes shown under section 501(c) of the Internal Revenue Code of 1986, which define the category under which an organization may be exempt.  A table of subsection and classification codes (which reflects a further breakdown of the Internal Revenue Code subsections) can be found in the section entitled &quot;Table of EO Subsection and Classification Codes&quot; (below).  One to four different classification codes may be present. 
+
+This field shows the description of the relevant subsection and classification code.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Subsection Codes are the codes shown under section 501(c) of the Internal Revenue Code of 1986, which define the category under which an organization may be exempt.  
+
+This field shows the description of the relevant subsection and classification code.</inlineHelpText>
+        <label>Subsection Classification Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>In_Care_of_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>In Care of Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Income_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Income Amount is a computer generated amount from the most recent Form 990 series return filed by the organization. Income Amount is computer generated using PART I, Total Revenue Line 12 and adding &quot;back in&quot; the expense items, i.e. Line 6b (Rental Expenses) shown on the Form 990 return.  On Form 990EZ it is generated using PART I, Line 9 and adding &quot;back in&quot; the expense items, i.e. Line 5b (Cost or Other Basis Expenses).  Income Amount for Form 990 is generated using Part I, Line 10b (Cost of Goods) and adding Part I, Line 12, Col. (A) (Total Revenue Col. A) and Part IV, Line 1, Col. (G) (Cost or Other Basis).  This field is dollars only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Income Amount is a computer generated amount from the most recent Form 990 series return filed by the organization.</inlineHelpText>
+        <label>Income Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Income_Code_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Income Codes relate to the amount of income shown on the most recent Form 990 series return filed by the organization.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Income Codes relate to the amount of income shown on the most recent Form 990 series return filed by the organization.</inlineHelpText>
+        <label>Income Code Description</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1   to   9,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10,000   to   24,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25,000   to   99,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100,000   to   499,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>500,000   to   999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1,000,000   to   4,999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5,000,000   to   9,999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10,000,000   to   49,999,999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50,000,000   to   greater</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Income_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Income Codes relate to the amount of income shown on the most recent Form 990 series return filed by the organization.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Income Codes relate to the amount of income shown on the most recent Form 990 series return filed by the organization.</inlineHelpText>
+        <label>Income Code</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inquiry__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Indicates the related Inquiry for this Tax Status verification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the related Inquiry for this Tax Status verification.</inlineHelpText>
+        <label>Inquiry</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Tax Status Verifications</relationshipLabel>
+        <relationshipName>Tax_Status</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>NTEE_Category__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The first digit (Common Code) is a modifier used to describe activities in support of nonprofit organizations. This field carries the descriptive representation of the first digit of the NTEE Code.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The first digit (Common Code) is a modifier used to describe activities in support of nonprofit organizations. This field carries the descriptive representation of the first digit of the NTEE Code.</inlineHelpText>
+        <label>NTEE Category</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NTEE_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The National Taxonomy of Exempt Entities (NTEE) Code is a four digit code used to classify an exempt organization in terms of its primary exempt activity.  A table of the codes found in the first three-digits can be found described below. The first digit (Common Code) is a modifier used to describe activities in support of nonprofit organizations.  The fourth digit further defines the classification of the organization and is not defined here.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The National Taxonomy of Exempt Entities (NTEE) Code is a four digit code used to classify an exempt organization in terms of its primary exempt activity.</inlineHelpText>
+        <label>NTEE Code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NTEE_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Full text description of the designated NTEE Code.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Full text description of the designated NTEE Code.</inlineHelpText>
+        <label>NTEE Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Negative_Sign_Form_990_Revenue__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates a &quot;-&quot; sign if the Form 990 Revenue Amount is a negative amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates a &quot;-&quot; sign if the Form 990 Revenue Amount is a negative amount</inlineHelpText>
+        <label>Negative Sign Form 990 Revenue</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Negative_Sign_Income_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates a &quot;-&quot; sign if the Income Amount is a negative amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates a &quot;-&quot; sign if the Income Amount is a negative amount</inlineHelpText>
+        <label>Negative Sign Income Amount</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Organization__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Indicates the related Organization for this Tax Status verification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the related Organization for this Tax Status verification.</inlineHelpText>
+        <label>Organization</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Tax Status Verifications</relationshipLabel>
+        <relationshipName>Tax_Status</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pub78DeductibilityStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pub 78 Deductibility Status Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Pub78_Matches__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates the number of matching records found in IRS Publication 78. If you get a count of 100, then you need to narrow and re-run the search as FGM only supports a max of 100 Pub78 matches per search.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the number of matching records found in IRS Publication 78. If you get a count of 100, then you need to narrow and re-run the search as FGM only supports a max of 100 Pub78 matches per search.</inlineHelpText>
+        <label>Pub78 Matches</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pub_78_City__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pub 78 City</label>
+        <length>35</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pub_78_Deductibility_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field was depreciated by the IRS early 2013. Please refer to the new &apos;Pub 78 Deductibility Status Code&apos; Field instead.</description>
+        <externalId>false</externalId>
+        <label>Pub 78 Deductibility Code (Depreciated)</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pub_78_Org_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Organization name found in Publication 78</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Organization name found in Publication 78</inlineHelpText>
+        <label>Pub 78 Org Name</label>
+        <length>107</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pub_78_State__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pub 78 State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Publication_78_Results__c</fullName>
+        <deprecated>false</deprecated>
+        <description>List of matching records from the IRS Publication 78 Search</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List of matching records from the IRS Publication 78 Search</inlineHelpText>
+        <label>Publication 78 Results</label>
+        <length>25000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Indicates the related Request for this Tax Status verification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the related Request for this Tax Status verification.</inlineHelpText>
+        <label>Request</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Tax Status Verifications</relationshipLabel>
+        <relationshipName>Tax_Status</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ruling_Date_Month__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>RIGHT(TEXT( Ruling_Date__c ),2)</formula>
+        <inlineHelpText>The Month on which the IRS issued it&apos;s ruling about this Organization&apos;s Tax Status.</inlineHelpText>
+        <label>Ruling Date (Month)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ruling_Date_Year__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>LEFT(TEXT(Ruling_Date__c),4)</formula>
+        <inlineHelpText>The Year in which the IRS made its ruling about this organization&apos;s tax status</inlineHelpText>
+        <label>Ruling Date (Year)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ruling_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Ruling Date</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sort_or_Secondary_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sort Name Line is another name under which the organization does business.  Also used for trade names, chapter names, or local numbers for subordinate organizations of group rulings.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sort Name Line is another name under which the organization does business.  Also used for trade names, chapter names, or local numbers for subordinate organizations of group rulings.</inlineHelpText>
+        <label>Sort or Secondary Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subsection_Classification_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is deprecated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is deprecated.</inlineHelpText>
+        <label>Subsection Classi. Desc. (Deprecated)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Government Instrumentality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Title-Holding Corporation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Charitable Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Educational Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Literary Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organization to Prevent Cruelty to Animals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organization to Prevent Cruelty to Children</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organization for Public Safety Testing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Religious Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scientific Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Civic League</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Local Association of Employees</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Welfare Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Agricultural Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Horticultural Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Labor Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Board of Trade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business League</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chamber of Commerce</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Real Estate Board</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pleasure, Recreational, or Social Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fraternal Beneficiary Society, Order or Association</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voluntary Employees&apos; Beneficiary Association (Non-Govt. Emps.)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voluntary Employees&apos; Beneficiary Association (Govt. Emps.)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Domestic Fraternal Societies and Associations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Teachers Retirement Fund Assoc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Benevolent Life Insurance Assoc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mutual Ditch or Irrigation Co.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mutual Cooperative Telephone Co.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organization Like Those on Three Preceding Lines</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Burial Association</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cemetery Company</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credit Union</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Mutual Corp. or Assoc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mutual Insurance Company or Assoc. Other Than Life or Marine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Corp. Financing Crop Operations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Supplemental Unemployment Compensation Trust or Plan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee Funded Pension Trust (Created Before 6/25/59)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Post or Organization of War Veterans</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal Service Organization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Black Lung Trust</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multiemployer Pension Plan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Veterans Assoc. Formed Prior to 1880</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trust Described in Sect. 4049 of ERISA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Title Holding Co. for Pensions, etc.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>State-Sponsored High Risk Health Insurance Organizations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>State-Sponsored Workers&apos; Compensation Reinsurance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apostolic and Religious Org. (501(d))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cooperative Hospital Service Organization (501(e))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cooperative Service Organization of Operating Educational</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organization (501(f))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Child Care Organization (501(k))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Charitable Risk Pool</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualified State-Sponsored Tuition Program</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4947(a)(1) - Private Foundation (Form 990PF Filer)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subsection_Code_Classification_Multi__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is used for testing purpose and it is deprecated.</inlineHelpText>
+        <label>Subsection Classification (Deprecated)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Agriculture organization (501(c)(5))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Black Lung (501(c)(21))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Board of Trade (501(c)(6))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Burial association (501(c)(13))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business league (501(c)(6))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cemetery company (501(c)(13))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chamber of Commerce (501(c)(6))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Charitable Organization (501(c)(3))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Child care under (501(k))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Civic league (501(c)(4))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credit Union (501(c)(14))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Educational organization (501(c)(3))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Farmers’ Cooperative (521)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Government instrumentality (501(c)(1))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Horticulture organization (501(c)(5))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IRC 527 82</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Labor organization (501(c)(5))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal Services Organization (501(c)(20))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Literary organization (501(c)(3))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multiemployer Pension Plan (501(c)(22))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Real estate board (501(c)(6))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Religious organization (501(c)(3))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scientific organization (501(c)(3))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social welfare organization (501(c)(4))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Title-holding corporation (501(c)(2))</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Subsection_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Subsection Code</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_ID_EIN__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Tax ID/EIN number used in this verification process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Tax ID/EIN number used in this verification process.</inlineHelpText>
+        <label>Tax ID / E.I.N.</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Period__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the tax period of the latest return filed (YYYYMM).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the tax period of the latest return filed (YYYYMM).</inlineHelpText>
+        <label>Tax Period</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_of_Org_Code_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This defines the type of organization as follows:
+
+Code       Description
+1	  Corporation
+2	  Trust
+3	  Cooperative
+4	  Partnership
+5	  Association</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This defines the type of organization as follows:
+
+Code       Description
+1	  Corporation
+2	  Trust
+3	  Cooperative
+4	  Partnership
+5	  Association</inlineHelpText>
+        <label>Type of Org Code Description</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Corporation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trust</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cooperative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Association</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type_of_Organization_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This defines the type of organization as follows:
+
+Code       Description
+1	  Corporation
+2	  Trust
+3	  Cooperative
+4	  Partnership
+5	  Association</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This defines the type of organization as follows:
+
+Code       Description
+1	  Corporation
+2	  Trust
+3	  Coooperative
+4	  Partnership
+5	  Association</inlineHelpText>
+        <label>Type of Organization Code</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Verification_Data_Source__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates the source that was used to Verify Tax Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the source that was used to Verify Tax Status</inlineHelpText>
+        <label>Verification Data Source</label>
+        <picklist>
+            <picklistValues>
+                <fullName>IRS Business Master  File</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Guidestar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Paper/Manual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Verification_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Optional: If desired, please use this field to enter any notes related to this tax status verification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional: If desired, please use this field to enter any notes related to this tax status verification.</inlineHelpText>
+        <label>Verification Notes</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Zip_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Zip Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Tax Status</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Name__c</columns>
+        <columns>NAME</columns>
+        <columns>Tax_ID_EIN__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>Tax_Status-{000000}</displayFormat>
+        <label>Tax Status ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Tax Status</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Failed_Verification</fullName>
+        <active>true</active>
+        <description>Use this for failed verification attempts</description>
+        <label>Failed Verification</label>
+        <picklistValues>
+            <picklist>Asset_Code_Description__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1   to   9%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2C000%2C000   to   4%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000   to   24%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000%2C000   to   49%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%2C000   to   499%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2C000   to   99%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2C000%2C000   to   9%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%2C000%2C000   to   greater</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>500%2C000   to   999%2C999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Deductibility_Code_Description__c</picklist>
+            <values>
+                <fullName>Contributions are deductible by treaty %28foreign organizations%29%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contributions are deductible%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contributions are not deductible%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Filing_Requirement_Code_1_Description__c</picklist>
+            <values>
+                <fullName>990 - %28all other%29 or 990EZ return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Government 501%28c%29%281%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Group return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file %28church%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file %28instrumentalities of states or political subdivisions%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file %28religious organization%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file%28all other%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Required to file Form 990-BL%2C Black Lung Trusts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Required to file Form 990-N - Income less than %2425%2C000 per year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Filing_Requirement_Code_2_Description__c</picklist>
+            <values>
+                <fullName>990-PF return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No 990-PF return</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Income_Code_Description__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1   to   9%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2C000%2C000   to   4%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000   to   24%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000%2C000   to   49%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%2C000   to   499%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2C000   to   99%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2C000%2C000   to   9%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%2C000%2C000   to   greater</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>500%2C000   to   999%2C999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subsection_Classification_Description__c</picklist>
+            <values>
+                <fullName>4947%28a%29%281%29 - Private Foundation %28Form 990PF Filer%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agricultural Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apostolic and Religious Org%2E %28501%28d%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benevolent Life Insurance Assoc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black Lung Trust</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board of Trade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Burial Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business League</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cemetery Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chamber of Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charitable Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charitable Risk Pool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Child Care Organization %28501%28k%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Civic League</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooperative Hospital Service Organization %28501%28e%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooperative Service Organization of Operating Educational</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corp%2E Financing Crop Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Union</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Domestic Fraternal Societies and Associations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Funded Pension Trust %28Created Before 6%2F25%2F59%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fraternal Beneficiary Society%2C Order or Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government Instrumentality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Horticultural Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Labor Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Service Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literary Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local Association of Employees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiemployer Pension Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual Cooperative Telephone Co%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual Ditch or Irrigation Co%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual Insurance Company or Assoc%2E Other Than Life or Marine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization %28501%28f%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization Like Those on Three Preceding Lines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization for Public Safety Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization to Prevent Cruelty to Animals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization to Prevent Cruelty to Children</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Mutual Corp%2E or Assoc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pleasure%2C Recreational%2C or Social Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post or Organization of War Veterans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualified State-Sponsored Tuition Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Religious Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scientific Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Welfare Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State-Sponsored High Risk Health Insurance Organizations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State-Sponsored Workers%27 Compensation Reinsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Supplemental Unemployment Compensation Trust or Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teachers Retirement Fund Assoc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Title Holding Co%2E for Pensions%2C etc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Title-Holding Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust Described in Sect%2E 4049 of ERISA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veterans Assoc%2E Formed Prior to 1880</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voluntary Employees%27 Beneficiary Association %28Govt%2E Emps%2E%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voluntary Employees%27 Beneficiary Association %28Non-Govt%2E Emps%2E%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subsection_Code_Classification_Multi__c</picklist>
+            <values>
+                <fullName>Agriculture organization %28501%28c%29%285%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black Lung %28501%28c%29%2821%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board of Trade %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Burial association %28501%28c%29%2813%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business league %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cemetery company %28501%28c%29%2813%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chamber of Commerce %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charitable Organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Child care under %28501%28k%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Civic league %28501%28c%29%284%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Union %28501%28c%29%2814%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Farmers%E2%80%99 Cooperative %28521%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government instrumentality %28501%28c%29%281%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Horticulture organization %28501%28c%29%285%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IRC 527 82</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Labor organization %28501%28c%29%285%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Services Organization %28501%28c%29%2820%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literary organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiemployer Pension Plan %28501%28c%29%2822%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real estate board %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Religious organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scientific organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social welfare organization %28501%28c%29%284%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Title-holding corporation %28501%28c%29%282%29%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Org_Code_Description__c</picklist>
+            <values>
+                <fullName>Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooperative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Verification_Data_Source__c</picklist>
+            <values>
+                <fullName>Guidestar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IRS Business Master  File</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paper%2FManual</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GuideStar_Check</fullName>
+        <active>true</active>
+        <label>GuideStar Check</label>
+        <picklistValues>
+            <picklist>Asset_Code_Description__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1   to   9%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2C000%2C000   to   4%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000   to   24%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000%2C000   to   49%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%2C000   to   499%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2C000   to   99%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2C000%2C000   to   9%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%2C000%2C000   to   greater</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>500%2C000   to   999%2C999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Deductibility_Code_Description__c</picklist>
+            <values>
+                <fullName>Contributions are deductible by treaty %28foreign organizations%29%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contributions are deductible%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contributions are not deductible%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Filing_Requirement_Code_1_Description__c</picklist>
+            <values>
+                <fullName>990 - %28all other%29 or 990EZ return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Government 501%28c%29%281%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Group return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file %28church%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file %28instrumentalities of states or political subdivisions%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file %28religious organization%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file%28all other%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Required to file Form 990-BL%2C Black Lung Trusts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Required to file Form 990-N - Income less than %2425%2C000 per year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Filing_Requirement_Code_2_Description__c</picklist>
+            <values>
+                <fullName>990-PF return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No 990-PF return</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Income_Code_Description__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1   to   9%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2C000%2C000   to   4%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000   to   24%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000%2C000   to   49%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%2C000   to   499%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2C000   to   99%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2C000%2C000   to   9%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%2C000%2C000   to   greater</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>500%2C000   to   999%2C999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subsection_Classification_Description__c</picklist>
+            <values>
+                <fullName>4947%28a%29%281%29 - Private Foundation %28Form 990PF Filer%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agricultural Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apostolic and Religious Org%2E %28501%28d%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benevolent Life Insurance Assoc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black Lung Trust</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board of Trade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Burial Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business League</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cemetery Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chamber of Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charitable Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charitable Risk Pool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Child Care Organization %28501%28k%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Civic League</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooperative Hospital Service Organization %28501%28e%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooperative Service Organization of Operating Educational</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corp%2E Financing Crop Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Union</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Domestic Fraternal Societies and Associations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Funded Pension Trust %28Created Before 6%2F25%2F59%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fraternal Beneficiary Society%2C Order or Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government Instrumentality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Horticultural Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Labor Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Service Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literary Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local Association of Employees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiemployer Pension Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual Cooperative Telephone Co%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual Ditch or Irrigation Co%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual Insurance Company or Assoc%2E Other Than Life or Marine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization %28501%28f%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization Like Those on Three Preceding Lines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization for Public Safety Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization to Prevent Cruelty to Animals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization to Prevent Cruelty to Children</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Mutual Corp%2E or Assoc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pleasure%2C Recreational%2C or Social Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post or Organization of War Veterans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualified State-Sponsored Tuition Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Religious Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scientific Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Welfare Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State-Sponsored High Risk Health Insurance Organizations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State-Sponsored Workers%27 Compensation Reinsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Supplemental Unemployment Compensation Trust or Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teachers Retirement Fund Assoc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Title Holding Co%2E for Pensions%2C etc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Title-Holding Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust Described in Sect%2E 4049 of ERISA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veterans Assoc%2E Formed Prior to 1880</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voluntary Employees%27 Beneficiary Association %28Govt%2E Emps%2E%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voluntary Employees%27 Beneficiary Association %28Non-Govt%2E Emps%2E%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subsection_Code_Classification_Multi__c</picklist>
+            <values>
+                <fullName>Agriculture organization %28501%28c%29%285%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black Lung %28501%28c%29%2821%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board of Trade %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Burial association %28501%28c%29%2813%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business league %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cemetery company %28501%28c%29%2813%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chamber of Commerce %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charitable Organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Child care under %28501%28k%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Civic league %28501%28c%29%284%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Union %28501%28c%29%2814%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Farmers%E2%80%99 Cooperative %28521%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government instrumentality %28501%28c%29%281%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Horticulture organization %28501%28c%29%285%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IRC 527 82</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Labor organization %28501%28c%29%285%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Services Organization %28501%28c%29%2820%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literary organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiemployer Pension Plan %28501%28c%29%2822%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real estate board %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Religious organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scientific organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social welfare organization %28501%28c%29%284%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Title-holding corporation %28501%28c%29%282%29%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Org_Code_Description__c</picklist>
+            <values>
+                <fullName>Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooperative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Verification_Data_Source__c</picklist>
+            <values>
+                <fullName>Guidestar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IRS Business Master  File</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paper%2FManual</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>IRS_Master_Business_File_Verification</fullName>
+        <active>true</active>
+        <description>Use this record type for all verifications against the IRS Master Business File</description>
+        <label>IRS Master Business File Verification</label>
+        <picklistValues>
+            <picklist>Asset_Code_Description__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1   to   9%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2C000%2C000   to   4%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000   to   24%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000%2C000   to   49%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%2C000   to   499%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2C000   to   99%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2C000%2C000   to   9%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%2C000%2C000   to   greater</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>500%2C000   to   999%2C999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Deductibility_Code_Description__c</picklist>
+            <values>
+                <fullName>Contributions are deductible by treaty %28foreign organizations%29%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contributions are deductible%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contributions are not deductible%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Filing_Requirement_Code_1_Description__c</picklist>
+            <values>
+                <fullName>990 - %28all other%29 or 990EZ return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Government 501%28c%29%281%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Group return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file %28church%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file %28instrumentalities of states or political subdivisions%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file %28religious organization%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Not required to file%28all other%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Required to file Form 990-BL%2C Black Lung Trusts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>990 - Required to file Form 990-N - Income less than %2425%2C000 per year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Filing_Requirement_Code_2_Description__c</picklist>
+            <values>
+                <fullName>990-PF return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No 990-PF return</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Income_Code_Description__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1   to   9%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2C000%2C000   to   4%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000   to   24%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2C000%2C000   to   49%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%2C000   to   499%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2C000   to   99%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2C000%2C000   to   9%2C999%2C999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%2C000%2C000   to   greater</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>500%2C000   to   999%2C999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subsection_Classification_Description__c</picklist>
+            <values>
+                <fullName>4947%28a%29%281%29 - Private Foundation %28Form 990PF Filer%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agricultural Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apostolic and Religious Org%2E %28501%28d%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benevolent Life Insurance Assoc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black Lung Trust</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board of Trade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Burial Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business League</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cemetery Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chamber of Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charitable Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charitable Risk Pool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Child Care Organization %28501%28k%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Civic League</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooperative Hospital Service Organization %28501%28e%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooperative Service Organization of Operating Educational</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corp%2E Financing Crop Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Union</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Domestic Fraternal Societies and Associations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Funded Pension Trust %28Created Before 6%2F25%2F59%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fraternal Beneficiary Society%2C Order or Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government Instrumentality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Horticultural Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Labor Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Service Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literary Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local Association of Employees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiemployer Pension Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual Cooperative Telephone Co%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual Ditch or Irrigation Co%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mutual Insurance Company or Assoc%2E Other Than Life or Marine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization %28501%28f%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization Like Those on Three Preceding Lines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization for Public Safety Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization to Prevent Cruelty to Animals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization to Prevent Cruelty to Children</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Mutual Corp%2E or Assoc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pleasure%2C Recreational%2C or Social Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post or Organization of War Veterans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualified State-Sponsored Tuition Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Religious Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scientific Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Welfare Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State-Sponsored High Risk Health Insurance Organizations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State-Sponsored Workers%27 Compensation Reinsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Supplemental Unemployment Compensation Trust or Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teachers Retirement Fund Assoc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Title Holding Co%2E for Pensions%2C etc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Title-Holding Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust Described in Sect%2E 4049 of ERISA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veterans Assoc%2E Formed Prior to 1880</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voluntary Employees%27 Beneficiary Association %28Govt%2E Emps%2E%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voluntary Employees%27 Beneficiary Association %28Non-Govt%2E Emps%2E%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subsection_Code_Classification_Multi__c</picklist>
+            <values>
+                <fullName>Agriculture organization %28501%28c%29%285%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black Lung %28501%28c%29%2821%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board of Trade %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Burial association %28501%28c%29%2813%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business league %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cemetery company %28501%28c%29%2813%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chamber of Commerce %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charitable Organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Child care under %28501%28k%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Civic league %28501%28c%29%284%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Union %28501%28c%29%2814%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Educational organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Farmers%E2%80%99 Cooperative %28521%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government instrumentality %28501%28c%29%281%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Horticulture organization %28501%28c%29%285%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IRC 527 82</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Labor organization %28501%28c%29%285%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Services Organization %28501%28c%29%2820%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literary organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multiemployer Pension Plan %28501%28c%29%2822%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real estate board %28501%28c%29%286%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Religious organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scientific organization %28501%28c%29%283%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social welfare organization %28501%28c%29%284%29%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Title-holding corporation %28501%28c%29%282%29%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Org_Code_Description__c</picklist>
+            <values>
+                <fullName>Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooperative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Verification_Data_Source__c</picklist>
+            <values>
+                <fullName>Guidestar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IRS Business Master  File</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paper%2FManual</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,12 @@
+<apex:page controller="FGM_Base.Verify501c3" >
+    <apex:form >
+        <apex:pageMessages />
+        <apex:pageBlock title="Lookup 501c3">
+            <apex:outputText value="You are about to check the organization’s EIN against an external database drawn from the IRS Business Master File. Do you want to proceed?" />
+            <apex:pageBlockButtons >
+                    <apex:commandButton id="btnYes" value="Yes" action="{!verify}" />
+                    <apex:commandButton id="btnNo" value="No" action="{!Cancel}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

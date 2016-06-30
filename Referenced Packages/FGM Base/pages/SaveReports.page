@@ -1,0 +1,63 @@
+<apex:page controller="FGM_Base.SetupReports" action="{!InitialiseSaveReports}" id="SetupReportsPage">
+    <apex:form id="form">
+        <apex:pageBlock id="pageblock">
+            <apex:outputPanel id="pnlMessages">
+                <apex:pageMessages />
+            </apex:outputPanel>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton id="btnSaveNext" value="Save" action="{!SaveAndNext}" disabled="{!IsNextDisabled}"/>
+                <apex:commandButton id="btnPrevious" value="Previous" action="{!BackToSetup}" />
+                <apex:commandButton id="btnCancel" value="Cancel" action="{!BackToOpportunity}" />
+            </apex:pageBlockButtons>
+                
+            <apex:pageBlockSection title="Report Details" id="pbsReportDetails">
+            
+                <apex:pageBlockTable value="{!ReportInfoList}" var="reportInfo" id="pbtableReportDetails">
+                
+                    <apex:column style="text-align:right;">
+                        <apex:facet name="header" ><b>Report #</b></apex:facet>
+                        <apex:outputText value="{!reportInfo.ReportNo}" id="txtReportno"/>
+                    </apex:column>
+                     <apex:column id="colRecordType" rendered="{!IsRecordTypeExist}">
+                        <apex:facet name="header"><b>Report type</b></apex:facet>                        
+                        <apex:selectList id="ddlRecordType" multiselect="false" value="{!reportInfo.RecordTypeId}" size="1">
+                            <apex:actionSupport event="onchange" action="{!setRecordType}" reRender="pbtableReportDetails"/>
+                            <apex:selectOptions value="{!RecordTypeOptions}"/>
+                        </apex:selectList>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header" ><b>{!$ObjectType.FGM_Base__Grantee_Report__c.fields.FGM_Base__Type__c.label}</b></apex:facet>
+                        <apex:inputField id="reporttype" value="{!reportInfo.Report.FGM_Base__Type__c}"/>
+                    </apex:column>                     
+                    <apex:column >
+                        <apex:facet name="header"><b>{!$ObjectType.FGM_Base__Grantee_Report__c.fields.FGM_Base__Due_Date__c.label}</b></apex:facet>
+                        <apex:inputField value="{!reportInfo.Report.FGM_Base__Due_Date__c}" id="inpDueDate"/>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header"><b>Linked to Payment</b></apex:facet>
+                        <apex:selectList id="ddlPaymentLinks" multiselect="false" value="{!reportInfo.PaymentId}" size="1">
+                            <apex:selectOptions value="{!PaymentLinkOptions}"/>
+                        </apex:selectList>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header"><b>{!$ObjectType.FGM_Base__Grantee_Report__c.fields.FGM_Base__Status__c.label}</b></apex:facet>
+                        <apex:inputField value="{!reportInfo.Report.FGM_Base__Status__c}" id="inpStatus"/>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header"><b>{!$ObjectType.FGM_Base__Grantee_Report__c.fields.FGM_Base__Remind_Awardee__c.label}</b></apex:facet>
+                        <apex:inputField value="{!reportInfo.Report.FGM_Base__Remind_Awardee__c}" id="inpRemindAwardee"/>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header"><b>{!$ObjectType.FGM_Base__Grantee_Report__c.fields.FGM_Base__Remind_Staff__c.label}</b></apex:facet>
+                        <apex:inputField value="{!reportInfo.Report.FGM_Base__Remind_Staff__c}" id="inpRemindStaff"/>
+                    </apex:column>
+                     <apex:column >
+                        <apex:facet name="header"><b>{!$ObjectType.FGM_Base__Grantee_Report__c.fields.FGM_Base__Display_Benchmark__c.label}</b></apex:facet>
+                        <apex:inputField value="{!reportInfo.Report.FGM_Base__Display_Benchmark__c}" id="inpDisplayBenchmark"/>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>           
+    </apex:form>    
+</apex:page>

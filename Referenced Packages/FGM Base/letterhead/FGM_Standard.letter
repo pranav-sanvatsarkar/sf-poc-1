@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#CCCCCC</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#FFFFFF</color>
+        <height>0</height>
+    </bottomLine>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>12</height>
+        <horizontalAlignment>Center</horizontalAlignment>
+        <logo>FGM/FGM_Footer.gif</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>5</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>FGM/FGM_Logo.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#999999</color>
+        <height>1</height>
+    </middleLine>
+    <name>FGM - Standard</name>
+    <topLine>
+        <color>#999999</color>
+        <height>1</height>
+    </topLine>
+</Letterhead>

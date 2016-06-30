@@ -1,0 +1,57 @@
+<apex:page Controller="AccountOverridController">
+    <apex:form >
+        <apex:pageBlock title="Account Info">
+            <apex:commandButton value="Update" action="{!save}"/>
+            <apex:pageBlockSection >
+                <apex:repeat value="{!setFields}" var="field">
+                    <apex:inputField value="{!sObj[field]}"/>
+                </apex:repeat>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        
+        <!--
+        <script type="text/javascript">
+        	function iframeLoad(sourceIFrame)
+        	{
+                if(sourceIFrame != null && sourceIFrame != undefined){
+                    var height = document.documentElement.clientHeight;
+                    height -= pageY(sourceIFrame)+ 20 ;
+                    height = (height < 0) ? 0 : height;
+                    sourceIFrame.style.height = height + 'px';
+                }
+            }
+            function pageY(elem) 
+        	{
+                return elem.offsetParent ? (elem.offsetTop + pageY(elem.offsetParent)) : elem.offsetTop;
+            }
+        </script>
+        <apex:pageMessages />
+        <apex:pageBlock title="Account Info">
+            <apex:pageBlockSection >
+                <apex:outputField value="{!account.Name}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock title="Component Initiator">
+            <apex:pageBlockSection >
+                Please enter Component Name
+                <apex:inputText value="{!StrComponentName}"/>
+                <apex:commandButton rerender="holder" value="Render Component"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock title="Dynamic Component Holder" id="holder">
+            <apex:dynamicComponent componentValue="{!CustomComponent}"/>
+        </apex:pageBlock>
+        <apex:pageBlock title="Dynamic IFrame Setter">
+            <apex:pageBlockSection >
+                Please enter IFrame URL
+            </apex:pageBlockSection>
+            <apex:inputText value="{!StrIFrameURL}"/>
+            <apex:commandButton action="{!LoadIFrame}" rerender="iFrameHolder" value="Render IFrame"/>
+        </apex:pageBlock>
+        <apex:pageBlock title="Dynamic IFrame Holder" id="iFrameHolder">
+            {!lstNewUrlParams}
+            <!--<apex:iframe frameborder="true" src="{!StrIFrameURL}" rendered="true"/>
+        </apex:pageBlock>-->
+    </apex:form>
+</apex:page>

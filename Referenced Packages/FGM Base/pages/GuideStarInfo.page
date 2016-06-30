@@ -1,0 +1,64 @@
+<apex:page StandardController="Account" extensions="FGM_Base.GuideStarInfo" action="{!initialize}">
+<style>
+    input[type="text"],textarea{
+        width:320px;
+    }
+    .bPageBlock .detailList .dataCol {
+       width: 100%;
+    }
+    .instructionHeader{
+        font-weight:bold;       
+    }   
+</style>
+    <apex:form >    
+    <apex:pageBlock title="GuideStar Information">
+        <apex:pageMessages />
+        <apex:outputPanel rendered="{! !strHideTable}">
+        <apex:outputText value="{!GuidestarSearchResultInstruction}" styleClass="instructionHeader"/> 
+        <br/>  <br/>     
+        <apex:pageBlockSection title="Select Organization"   >        
+                <apex:pageBlockTable style="width:1000px;" value="{!lstGuideStarSearchResult}" var="GuidestarSearch">
+                    <apex:column headerValue="Organization Name" >      
+                        <apex:commandLink value="{!GuidestarSearch.strOrgName}" action="{!show}" >
+                            <apex:param name="strOrgID" value="{!GuidestarSearch.strOrganizationId}" assignTo="{!strOrgID}"/>
+                        </apex:commandLink>         
+                    </apex:column>  
+                    <apex:column headerValue="EIN" value="{!GuidestarSearch.strEIN}"/>
+                    <apex:column headerValue="City" value="{!GuidestarSearch.strCity}"/>
+                    <apex:column headerValue="State" value="{!GuidestarSearch.strState}"/>
+                    <apex:column headerValue="Postal Code" value="{!GuidestarSearch.strPostalCode}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>        
+        </apex:outputPanel>
+        <apex:pageBlockButtons rendered="{!strHideTable}">      
+            <apex:CommandButton Value="Save" action="{!save}"></apex:CommandButton>
+            <apex:CommandButton Value="Cancel" action="{!Cancel}"></apex:CommandButton>
+        </apex:pageBlockButtons>        
+        
+        <apex:outputpanel id="pbsAccount" >
+            <apex:pageBlockSection title="Orgarization Information" rendered="{!strHideTable}" >
+                <apex:pageBlockTable value="{!SobjectFields}" var="field" >
+                    <apex:column headerValue="Field Names" >
+                        <b>{!$ObjectType.Account.Fields[field].Label}</b>
+                    </apex:column>
+                    <apex:column headerValue="New Values" >                                             
+                        <apex:inputField value="{!account[field]}" label="test"/>
+                    </apex:column>
+                    <apex:column headerValue="Previous Values" >                     
+                        <span style="color:#3890F6">{!oldaccount[field]}</span>
+                    </apex:column>                                
+                </apex:pageBlockTable> 
+            </apex:pageBlockSection>
+        </apex:outputpanel>
+        
+        <apex:outputpanel id="pbsTax">  
+            <apex:pageBlockSection title="Tax Status Information"  rendered="{!strHideTable}">
+                <apex:repeat value="{!TaxStatusFields}" var="field">
+                    <apex:inputField value="{!objTaxStatus[field]}"/>                    
+                </apex:repeat>
+            </apex:pageBlockSection>    
+        </apex:outputpanel>
+            
+        </apex:pageBlock>           
+    </apex:form>
+</apex:page>

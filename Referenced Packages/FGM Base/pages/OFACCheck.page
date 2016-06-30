@@ -1,0 +1,121 @@
+<apex:page Controller="FGM_Base.OFACCheck">
+    <style type="text/css">
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.columnStyle {
+    padding: 10px, 10px, 10px, 10px;
+}
+</style>
+    <apex:form id="sdnForm">
+
+        <apex:actionFunction name="loadOFACCheck" action="{!callOFACCheck}"
+            rerender="sdnPageBlock" status="refreshContent" />
+
+        <apex:pageBlock id="sdnPageBlock" title="{!titleMessage}">
+            <apex:pageMessages />
+            <div>
+                <h1>{!pageMessage}</h1>
+            </div>
+
+            <div id="progressImage" class="center">
+                <apex:actionStatus id="refreshContent">
+                    <apex:facet name="start">
+                        <!--  <apex:image url="{!$Resource.LoadingImage}" />  --> Processing...                       
+               </apex:facet>
+                    <apex:facet name="stop">
+                    </apex:facet>
+                </apex:actionStatus>
+            </div>
+
+
+            <div style="float: right">
+                <apex:commandLink action="{!prev}" value="Prev"
+                    rendered="{!showPrev}" rerender="sdnPageBlock"
+                    status="refreshContent" />
+                &nbsp;&nbsp;&nbsp;
+                <apex:commandLink action="{!next}" value="Next"
+                    rendered="{!showNext}" rerender="sdnPageBlock"
+                    status="refreshContent" />
+            </div>
+
+            <div style="clear: both">
+                <br />
+            </div>
+
+            <apex:pageBlockTable value="{!sdnList}" var="sdn"
+                rendered="{!showSDNlist}">
+                <apex:column >
+                    <apex:inputCheckbox value="{!sdn.isSelected}" />
+                </apex:column>
+
+                <apex:column >
+                    <apex:facet name="header">SDN Num</apex:facet>
+                    <apex:outputText value="{!sdn.sdnNum}" />
+                </apex:column>
+
+                <apex:column >
+                    <apex:facet name="header">Name</apex:facet>
+                    <apex:outputText value="{!sdn.sdnName}" />
+                </apex:column>
+
+                <apex:column >
+                    <apex:facet name="header">Type</apex:facet>
+                    <apex:outputText value="{!sdn.grantType}" />
+                </apex:column>
+                
+                <apex:column >
+                    <apex:facet name="header">Aliases</apex:facet>
+                    <apex:outputText value="{!sdn.altNames}"/>
+                </apex:column>
+           <!-- 
+            <apex:column >
+                <apex:facet name="header">Address</apex:facet>
+                <apex:outputText value="{!sdn.addresses}"/>
+            </apex:column>
+            
+            <apex:column >
+                <apex:facet name="header">Remarks</apex:facet>
+                <apex:outputText value="{!sdn.remarks}"/>
+            </apex:column>
+            -->
+                <apex:column >
+                    <apex:facet name="header">Match Level</apex:facet>
+                    <apex:outputText value="{!sdn.matchLevel}" />
+                </apex:column>
+
+            </apex:pageBlockTable>
+
+            <div style="float: right">
+                <apex:commandLink action="{!prev}" value="Prev"
+                    rendered="{!showPrev}" rerender="sdnPageBlock"
+                    status="refreshContent" />
+                &nbsp;&nbsp;&nbsp;
+                <apex:commandLink action="{!next}" value="Next"
+                    rendered="{!showNext}" rerender="sdnPageBlock"
+                    status="refreshContent" />
+            </div>
+
+            <div style="clear: both">
+                <br />
+            </div>
+
+            <hr />
+            <div class="center">
+                <apex:commandButton value="Save Selected"
+                    action="{!saveOFACRecords}" rerender="sdnPageBlock"
+                    rendered="{!showSDNlist}" status="refreshContent" />
+                <apex:commandButton value="Cancel" action="{!redirectProposal}" />
+            </div>
+
+        </apex:pageBlock>
+    </apex:form>
+    <script type="text/javascript">
+     loadOFACCheck();
+ </script>
+    <!-- End Default Content REMOVE THIS -->
+</apex:page>

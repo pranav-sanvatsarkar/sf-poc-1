@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Manages scheduled, submitted and approved Reports on Requests.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Address__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Report_Contact__r.MailingStreet &amp; BR() &amp;
+Report_Contact__r.MailingCity &amp;
+
+IF(Report_Contact__r.MailingState=&quot;&quot;,
+
+&quot;&quot;, &quot;, &quot; &amp; Report_Contact__r.MailingState) &amp;
+
+&quot; &quot; &amp; Report_Contact__r.MailingPostalCode</formula>
+        <label>Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Award_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Request__r.Award_Date__c</formula>
+        <label>Award Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Comment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Organization__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Report_Contact__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Organization</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Display_Benchmark__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If you check this box, it will display Benchmarks for the corresponding Grantee Report on the Portal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If you check this box, it will display Benchmarks for the corresponding Grantee Report on the Portal.</inlineHelpText>
+        <label>Display Benchmark</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fax__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Report_Contact__r.Fax</formula>
+        <label>Fax</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Final_Report__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Final Report</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Impact__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Impact</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Interim_Report__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Interim Report</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Overdue__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Is Overdue</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Report_Contact__r.FirstName &amp;
+
+IF(Report_Contact__r.Middle_Name__c=&quot;&quot;, 
+
+&quot;&quot;, &quot; &quot; &amp; Report_Contact__r.Middle_Name__c) 
+
+&amp; &quot; &quot; &amp; Report_Contact__r.LastName
+
+&amp;
+
+IF(Report_Contact__r.Suffix__c=&quot;&quot;, 
+
+&quot;&quot;, &quot;, &quot; &amp; Report_Contact__r.Suffix__c)</formula>
+        <label>Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Organization__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Request__r.Account.Name</formula>
+        <label>Organization</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Report_Contact__r.Phone</formula>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Remind_Awardee__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Remind Awardee</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Remind_Staff__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Remind Staff</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Report_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Report Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Grantee Reports</relationshipLabel>
+        <relationshipName>Grantee_Reports</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Request_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Request__r.Request_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Request Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Grantee Reports</relationshipLabel>
+        <relationshipName>Grantee_Reports</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Requested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Submission_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Submission Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Submitted_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact lookup to Base MP to associate grantee report  with Submitting User</inlineHelpText>
+        <label>Submitted By</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Grantee Reports (Submitted by)</relationshipLabel>
+        <relationshipName>Grantee_Reports1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Title__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Report_Contact__r.Title</formula>
+        <label>Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Scope</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Narrative and Financial</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Narrative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR( Due_Date__c  ))</formula>
+        <label>Due Date Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Grantee Report</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>GR-{000000000}</displayFormat>
+        <label>Grantee Report</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Grantee Reports</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Request__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Request_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Final_Report__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Due_Date__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Request__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Request_Number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Final_Report__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Due_Date__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Request__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Request_Number__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Final_Report__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Due_Date__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Request__c</searchFilterFields>
+        <searchFilterFields>Request_Number__c</searchFilterFields>
+        <searchFilterFields>Final_Report__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Due_Date__c</searchFilterFields>
+        <searchResultsAdditionalFields>Request__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Request_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Final_Report__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Due_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

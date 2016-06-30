@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Empty_GR_Message_For_Current_Request</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Empty GR Message For Current Request</shortDescription>
+        <value>Grantee Report does not exist for this Request.</value>
+    </labels>
+    <labels>
+        <fullName>Empty_GR_Message_For_Other_Request</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Empty GR Message For Other Request</shortDescription>
+        <value>Grantee Report does not exist for other Request&apos;s of same Organization.</value>
+    </labels>
+    <labels>
+        <fullName>GR_Header_For_Current_Request</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>GR Header For Current Request</shortDescription>
+        <value>Grantee Report Information for this Request:</value>
+    </labels>
+    <labels>
+        <fullName>GR_Header_For_Other_Request</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>GR Header For Other Request</shortDescription>
+        <value>&lt;br/&gt;
+Grantee Report information for other Request&apos;s of same Organization:</value>
+    </labels>
+</CustomLabels>

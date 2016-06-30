@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Amount_Requested__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Amount Requested</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Award_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Award Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Benchmarks__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Benchmarks</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Conflict_of_Interest__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Conflict of Interest</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contributions__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contributions</label>
+        <summarizedField>Contributing_Programs__c.Amount__c</summarizedField>
+        <summaryForeignKey>Contributing_Programs__c.Request__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Duration_Months__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Duration (Months)</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EIN__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Account.EIN__c</formula>
+        <label>EIN</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Extend_By_Days__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Extend By (Days)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Extend__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Extend</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Extended_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>End_Date__c +  Extend_By_Days__c</formula>
+        <label>Extended End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fiscal_Sponsor_Comment__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Fiscal Sponsor Comment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Fiscal_Sponsor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Fiscal Sponsor</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IRS_Letter__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(Account.IRS_Letter__c=TRUE, &quot;Received&quot;, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IRS Letter</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Program_Parent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Lead Program Parent</label>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Opportunities (Lead Program Parent)</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Lead Program</label>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Grants &amp; Apps</relationshipLabel>
+        <relationshipName>Grants_Apps</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Multi_Year__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(Duration_Months__c &gt; 12, &quot;Yes&quot;, &quot;No&quot;)</formula>
+        <label>Multi-Year</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OFAC__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>OFAC</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Organization_Address__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Account.BillingStreet &amp;
+
+IF(Account.BillingCity =&quot;&quot;,
+
+&quot;&quot;, &quot;, &quot; &amp; Account.BillingCity) &amp; 
+
+IF(Account.BillingState=&quot;&quot;,
+
+&quot;&quot;, &quot;, &quot; &amp; Account.BillingState) &amp;
+
+&quot; &quot; &amp; Account.BillingPostalCode</formula>
+        <label>Organization Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Organization_Budget__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Organization Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Payee__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Payee</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Requests (Payee)</relationshipLabel>
+        <relationshipName>Requests</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Payments_Balance__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Amount  - Payments_Made__c</formula>
+        <label>Payments Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Payments_Made__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Payments Made</label>
+        <summarizedField>Payment__c.Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Payment__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Paid</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Payment__c.Request__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Payments_Scheduled__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Payments Scheduled</label>
+        <summarizedField>Payment__c.Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Payment__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Scheduled</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Payment__c.Request__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Payments_To_Be_Scheduled__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Amount -  Payments_Scheduled__c -  Payments_Made__c</formula>
+        <label>Payments To Be Scheduled</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Previous Request</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Renewal Requests</relationshipLabel>
+        <relationshipName>Renewal_Requests</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Budget__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Project Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Recommended_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recommended Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Renewal</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Request_Number_Apex__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request Number Apex</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Number_Legacy__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Request Number Legacy</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( Request_Number_Legacy__c &lt;&gt; &quot;&quot;, Request_Number_Legacy__c , Request_Number_Apex__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Request Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>General Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sponsored_Organization__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sponsored Organization</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Sponsored Agency</relationshipLabel>
+        <relationshipName>Grants_Apps</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Submitted_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact lookup to Base MP to associate request with Submitting User</inlineHelpText>
+        <label>Submitted By</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <validationRules>
+        <fullName>Extend_Request_Timeframe</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( Extend__c = False,
+            NOT ISNULL( Extend_By_Days__c ) 
+          )</errorConditionFormula>
+        <errorMessage>You must check of Extend to enter the number of days the request is extended by.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Charity_Check</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Charity Check</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/CharityCheck?Id={!Opportunity.Id}&amp;EIN={!Opportunity.EIN__c}&amp;ORG={!Opportunity.Account}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Lookup_501c3</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Lookup 501c3</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__Verify501c3?Id={!Opportunity.Id}&amp;EIN={!Account.EIN__c}&amp;ObjName=GrantApp</url>
+    </webLinks>
+    <webLinks>
+        <fullName>OFAC_Check</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>OFAC Check</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__OFACCheck?OrgName={!Opportunity.Account}&amp;ObjName=GrantApp&amp;Id={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>OFAC_Contact</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>OFAC Contact</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__OFACCheck?FirstName={!Opportunity.Submitted_By__c}&amp;ObjName=Contact&amp;Id={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Setup_Benchmarks</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Setup Benchmarks</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__SetupBenchmarks?id={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Setup_Payments</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Setup Payments</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__SetupPayments?id={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Setup_Reports</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Setup Reports</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__SetupReports?id={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Verify_Pub78</fullName>
+        <availability>online</availability>
+        <description>Testing MBF and Pub78 functionality</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Verify 501c3</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__VerifyIRSMBAndPub78?OrgName={!Opportunity.Account}&amp;EIN={!Opportunity.EIN__c }&amp;ObjName=GrantApp&amp;Id={!Opportunity.Id}</url>
+    </webLinks>
+</CustomObject>

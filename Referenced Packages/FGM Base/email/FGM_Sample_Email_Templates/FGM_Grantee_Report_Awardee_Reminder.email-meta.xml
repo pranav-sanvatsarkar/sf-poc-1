@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to Awardee before report due date.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>FGM_Standard</letterhead>
+    <name>FGM - Grantee Report Awardee Reminder</name>
+    <style>freeForm</style>
+    <subject>FGM - Grantee Report Awardee Reminder</subject>
+    <textOnly>{!Today} 
+  
+Please note reference no. {!Opportunity.Displayed_Request_Number__c} on all 
+correspondence. 
+  
+{!Contact.FirstName} 
+{!Contact.LastName} 
+{!Contact.MailingAddress} 
+ Dear {!Contact.Salutation} {!Contact.FirstName} 
+{!Contact.LastName}, 
+
+This email is to 
+confirm that your time extension has been approved for the submitting 
+of your Grant Report. Your new due date is 
+{!NPGrantsManager__Grantee_Reports__c.NPGrantsManager__Due_Date__c}. 
+
+Sincerely,{!User.FirstName} 
+  
+{!User.FirstName} {!User.LastName} 
+{!User.Title} 
+{!User.CompanyName} 
+{!User.Address} 
+{!User.Phone} x{!User.Extension} 
+{!User.Email} 
+{!User.NPGrantsManager__Company_Website__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

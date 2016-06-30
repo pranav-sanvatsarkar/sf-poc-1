@@ -1,0 +1,5 @@
+<apex:page standardController="FGM_Base__Payment__c" extensions="FGM_Base.GRAlerts" action="{!Initialize}">
+	<apex:outputText value="{!GRAlert}" escape="false"></apex:outputText>
+	<br/>
+	<apex:outputText value="{!GRAlertOtherRequest}" escape="false"></apex:outputText>
+</apex:page>

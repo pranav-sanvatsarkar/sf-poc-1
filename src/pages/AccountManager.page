@@ -1,0 +1,7 @@
+<apex:page standardController="Account" extensions="AccountManagerController">
+	<apex:pageMessages/>
+	<apex:repeat value="{!LstFieldAPINames}" var="field" rendered="{!IF( LstFieldAPINames != null, TRUE, FALSE )}">
+		{!field}
+		<br/>
+	</apex:repeat>
+</apex:page>

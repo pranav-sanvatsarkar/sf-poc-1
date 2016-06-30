@@ -1,0 +1,32 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial,sans-serif; font-size: 16px;" class="Apple-style-span">
+<div><span style="font-size: small;" class="Apple-style-span">{!Today}</span></div>
+<div><span style="font-size: small;" class="Apple-style-span"><br></span></div>
+<div><span style="font-size: small;" class="Apple-style-span">Please note Request 
+Number {!Grantee_Report__c.Request_Number__c} on all 
+correspondence.<br>Please note Grantee Report {!Grantee_Report__c.Name} for questions on this submission.<br></span></div>
+<div><span style="font-size: small;" class="Apple-style-span"><br></span></div>
+<div><span style="white-space: pre;" class="Apple-style-span"><span style="font-size: small;" class="Apple-style-span">{!Grantee_Report__c.Name__c}<br>{!Grantee_Report__c.Title__c}<br>{!Grantee_Report__c.Organization__c}<br></span></span></div>
+<div><span style="white-space: pre;" class="Apple-style-span"><span style="font-size: small;" class="Apple-style-span">{!Grantee_Report__c.Address__c}</span></span></div>
+<div><span style="font-size: small;" class="Apple-style-span"><br></span></div>
+<div><span style="font-size: small;" class="Apple-style-span"><br></span></div>
+<div><span style="font-size: small;" class="Apple-style-span">Dear </span><span style="white-space: pre;" class="Apple-style-span"><span style="font-size: small;" class="Apple-style-span"></span></span><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial,sans-serif; font-size: 16px;" class="Apple-style-span"><span style="white-space: pre;" class="Apple-style-span"><span style="font-size: small;" class="Apple-style-span">{!Grantee_Report__c.Name__c}</span></span></span></span></font><span style="font-size: small;" class="Apple-style-span">,</span></div></span></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><br></span></font></div>
+
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial; font-size: 16px;" class="Apple-style-span"><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span">This email is to remind you that your your Grant Report for {!Grantee_Report__c.Request__c} will soon be due. The report due date 
+is {!Grantee_Report__c.Due_Date__c}.</span></font></span></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><br></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial; font-size: 16px;" class="Apple-style-span"><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span">Sincerely,</span></font></span></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial; font-size: 16px;" class="Apple-style-span"><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span">{!User.FirstName}</span></font></span></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><br></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial; font-size: 16px;" class="Apple-style-span"><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span">{!User.FirstName} 
+{!User.LastName}</span></font></span></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial; font-size: 16px;" class="Apple-style-span"><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span">{!User.Title}</span></font></span></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial; font-size: 16px;" class="Apple-style-span"><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span">{!User.CompanyName}</span></font></span></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial; font-size: 16px;" class="Apple-style-span"><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span">{!User.Address}</span></font></span></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial; font-size: 16px;" class="Apple-style-span"><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span">{!User.Phone}</span></font></span></span></font></div>
+<div><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span"><span style="font-family: arial; font-size: 16px;" class="Apple-style-span"><font class="Apple-style-span" face="Arial, sans-serif"><span style="font-size: small;" class="Apple-style-span">{!User.Email}</span></font></span></span></font></div>]]></td>
+</tr>
+</table>

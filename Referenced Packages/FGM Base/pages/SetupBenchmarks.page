@@ -1,0 +1,75 @@
+<apex:page controller="FGM_Base.SetupBenchmarks" action="{!InitialiseBenchmarks}" id="SetupBenchmarksPage">
+      
+    <apex:form id="form">
+        <apex:pageBlock id="pageblock">
+            <apex:outputPanel id="pnlMessages">
+                <apex:pageMessages />
+            </apex:outputPanel>
+            
+            <table width="100%" border="0">
+                <tr>
+                    <td align="left" height="25px">
+                            <apex:actionStatus id="Processing" startText="(Processing...)"/>
+                    </td>
+                </tr>
+            </table>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton id="btnSave" value="Save" action="{!Save}" />
+                <apex:commandButton id="btnAdd" value="Add More" action="{!AddCondition}" reRender="pnlBenchmarkCondition" /><!-- rendered="{!ConditionNotExist}" -->
+                <!--<apex:commandButton id="btnPrevious" value="Previous" action="{!BackToReportsInfo}" /> -->
+                <apex:commandButton id="btnReturn" value="Cancel" action="{!BackToOpportunity}" /> 
+            </apex:pageBlockButtons>
+            
+            <apex:outputPanel id="pnlBenchmarkCondition" >
+            <apex:pageBlockSection title="Setup Benchmarks" id="pbsBenchMarks">
+                <apex:pageBlockTable value="{!BenchmarkConditionList}" var="condition" id="pbtableReportDetails">
+                    
+                    <!-- <apex:column rendered="{!ConditionsAlreadyExist}">
+                        <apex:facet name="header" ><b>Type</b></apex:facet>
+                        <apex:outputField value="{!condition.RecordType.Name}" id="inRecTypeName"/>
+                    </apex:column> -->
+                    
+                    <!-- <apex:column >
+                        <!-- <apex:inputField value="{!condition.RecordTypeId}" id="inpType"/>
+                        <apex:facet name="header" ><b>Type</b></apex:facet>
+                        <apex:selectList multiselect="false" value="{!condition.RecordTypeId}" size="1" id="ddlRecordType">
+                            <apex:selectOptions value="{!RecordTypeOptions}"/>
+                        </apex:selectList>
+                    </apex:column> 
+                    
+                    <apex:column >
+                        <apex:facet name="header" ><b>Name</b></apex:facet>
+                        <apex:inputField value="{!condition.Name}" id="inpName"/>
+                    </apex:column> -->
+                    
+                    <apex:column >
+                        <apex:facet name="header"><b>Description</b></apex:facet>
+                        <apex:inputField value="{!condition.FGM_Base__Description__c}" id="inpDescription"/>
+                    </apex:column> 
+                   <apex:column >
+                        <apex:facet name="header"><b>Due Date</b></apex:facet>
+                        <apex:inputField value="{!condition.FGM_Base__Due_Date__c}" id="inpDeadline"/>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header"><b>Include in Agreement</b></apex:facet>
+                        <apex:inputField value="{!condition.FGM_Base__Include_in_Agreement__c}" id="inpGrantAgreement"/>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header"><b>Request Update on Report</b></apex:facet>
+                        <apex:inputField value="{!condition.FGM_Base__Request_Update_on_Report__c}" id="inpDueDate"/>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header"><b>Status</b></apex:facet>
+                        <apex:inputField value="{!condition.FGM_Base__Status__c}" id="ddlStatus"/>
+                    </apex:column>
+                    <apex:column >
+                    	<apex:facet name="header"> <b>Benchmark Type</b></apex:facet>
+                    	<apex:inputField value="{!condition.FGM_Base__Benchmark_Type__c}" id="inpbenchmarktype"/>
+                    </apex:column>
+              </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>           
+    </apex:form>     
+</apex:page>

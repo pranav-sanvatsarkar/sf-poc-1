@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Amount_Requested__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Amount Requested</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Attachments_to_Request_on_Conversion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If checkbox is checked then movement of attachments will be custom.</inlineHelpText>
+        <label>Attachments to Request on Conversion</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Last_Status_Change__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Date of Last Status Change</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Days_Since_Last_Status_Change__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Days Since Last Status Change</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Decline_Comment__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Decline Comment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Decline_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Decline Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Decline_Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Decline Reason</label>
+        <picklist>
+            <controllingField>Status</controllingField>
+            <picklistValues>
+                <fullName>Not a 501c3</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Not Converted</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Individual</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Not Converted</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>International</fullName>
+                <default>false</default>
+                <controllingFieldValues>Closed - Not Converted</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Docket__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Docket (Deprecated)</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Inquiries</relationshipLabel>
+        <relationshipName>Inquiries</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Duration_Months__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Duration (Months)</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EIN__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The EIN is a unique nine-digit number assigned by the IRS to businesses operating in the United States. It is also known as the Tax Identification Number (TIN), Federal Employer Identification Number (FEIN) or the Federal Tax Identification Number.</inlineHelpText>
+        <label>EIN</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>IRS_Letter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>IRS Letter</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Link_to_Organization__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Link to Organization</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Inquiries</relationshipLabel>
+        <relationshipName>Inquiries</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Middle_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Middle Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Multi_Year__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(Duration_Months__c &gt; 12, &quot;Yes&quot;, &quot;No&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Multi-Year</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Organization_Budget__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Organization Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Organization_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Organization Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Oil &amp; Gas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Petroleum</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fossil Fuels</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Heavy Crude</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Previous Request</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Inquiries</relationshipLabel>
+        <relationshipName>Inquiries</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Program</label>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Inquiries</relationshipLabel>
+        <relationshipName>Inquiries</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Budget__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Project Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Renewal</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Request_Number_Apex__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request Number Apex</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Number_Legacy__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Request Number Legacy</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( Request_Number_Legacy__c &lt;&gt; &quot;&quot;, Request_Number_Legacy__c , Request_Number_Apex__c )</formula>
+        <label>Request Number</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>General Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request</label>
+        <length>120</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Submission_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Date on which this was submitted.</inlineHelpText>
+        <label>Submission Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Submitted_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact lookup to Base MP to associate LOI  with Submitting User</inlineHelpText>
+        <label>Submitted By</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Suffix__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Suffix</label>
+        <length>7</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <validationRules>
+        <fullName>FGM_Declines_Must_Have_Decline_Reason</fullName>
+        <active>true</active>
+        <description>If Lead Status = Decline and Decline Reason = “” then throw an error</description>
+        <errorConditionFormula>AND(ISPICKVAL( Decline_Reason__c , &quot;&quot;), ISPICKVAL( Status , &quot;Declined&quot;))</errorConditionFormula>
+        <errorMessage>In order to process a decline, you must indicate a Decline Reason</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Lookup_501c3</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Lookup 501c3</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__Verify501c3?Id={!Lead.Id}&amp;EIN={!Lead.EIN__c}&amp;ObjName=LOI</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Verify_Pub78</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Verify 501c3</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/FGM_Base__VerifyIRSMBAndPub78?OrgName={! Lead.Company }&amp;EIN={! Lead.EIN__c }&amp;ObjName=LOI&amp;Id={! Lead.Id }&amp;State={! Lead.State }</url>
+    </webLinks>
+</CustomObject>
